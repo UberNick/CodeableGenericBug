@@ -20,15 +20,25 @@ class ViewController: UIViewController {
             print(bar1)
         }
 
-        let wrappedFoo2 = try? JSONDecoder().decode(GenericWrapper<Foo>.self, from: fooData)
+        /*let wrappedFoo2 = try? JSONDecoder().decode(WorkingGenericWrapper<Foo>.self, from: fooData)
         if let foo2 = wrappedFoo2?.data {
             print(foo2)
         }
         
-        let wrappedBar2 = try? JSONDecoder().decode(GenericWrapper<Bar>.self, from: barData)
+        let wrappedBar2 = try? JSONDecoder().decode(WorkingGenericWrapper<Bar>.self, from: barData)
         if let bar2 = wrappedBar2?.data {
             print(bar2)
+        }*/
+        
+/*        let wrappedFoo3 = try? JSONDecoder().decode(BrokenGenericWrapper<Foo>.self, from: fooData)
+        if let foo3 = wrappedFoo3?.data {
+            print(foo2)
         }
+        
+        let wrappedBar3 = try? JSONDecoder().decode(BrokenGenericWrapper<Bar>.self, from: barData)
+        if let bar3 = wrappedBar3?.data {
+            print(bar2)
+        }*/
     }
 
     func getDataFromFile(_ fileName: String) -> Data? {

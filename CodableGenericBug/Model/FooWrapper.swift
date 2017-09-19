@@ -1,9 +1,9 @@
 import Foundation
 
-struct FooWrapper<T: Codable>: Codable {
-    struct GenericWrapperData: Codable {
+struct FooWrapper<S: Codable>: Codable {
+    struct GenericWrapperData<T: Codable>: Codable {
         let type: String
         let attributes: Foo
     }
-    let data: GenericWrapperData
+    let data: GenericWrapperData<S>
 }

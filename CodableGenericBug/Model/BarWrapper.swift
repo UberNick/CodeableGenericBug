@@ -1,10 +1,10 @@
 import Foundation
 
-struct BarWrapper<T: Codable>: Codable {
-    struct GenericWrapperData: Codable {
+struct BarWrapper<S: Codable>: Codable {
+    struct GenericWrapperData<T: Codable>: Codable {
         let type: String
         let attributes: Bar
     }
-    let data: GenericWrapperData
+    let data: GenericWrapperData<S>
 }
 

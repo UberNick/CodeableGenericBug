@@ -10,14 +10,24 @@ class ViewController: UIViewController {
             return
         }
         
-        let wrappedFoo = try? JSONDecoder().decode(GenericWrapper<Foo>.self, from: fooData)
-        if let foo = wrappedFoo?.data {
-            print(foo)
+        let wrappedFoo1 = try? JSONDecoder().decode(FooWrapper<Foo>.self, from: fooData)
+        if let foo1 = wrappedFoo1?.data {
+            print(foo1)
         }
-    
-        let wrappedBar = try? JSONDecoder().decode(GenericWrapper<Bar>.self, from: barData)
-        if let bar = wrappedBar?.data {
-            print(bar)
+        
+        let wrappedBar1 = try? JSONDecoder().decode(BarWrapper<Bar>.self, from: barData)
+        if let bar1 = wrappedBar1?.data {
+            print(bar1)
+        }
+
+        let wrappedFoo2 = try? JSONDecoder().decode(GenericWrapper<Foo>.self, from: fooData)
+        if let foo2 = wrappedFoo2?.data {
+            print(foo2)
+        }
+        
+        let wrappedBar2 = try? JSONDecoder().decode(GenericWrapper<Bar>.self, from: barData)
+        if let bar2 = wrappedBar2?.data {
+            print(bar2)
         }
     }
 

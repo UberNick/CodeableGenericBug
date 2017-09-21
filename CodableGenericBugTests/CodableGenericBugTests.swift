@@ -35,7 +35,8 @@ class CodableGenericBugTests: XCTestCase {
     
     // ---- BROKEN PIECE -----
     // Test deserialization when using generic "Foo" and "Bar" model wrappers.
-    // Should work and behave in same manner as using explicit wrappers (above), but this fails
+    // Should work and behave in same manner as using explicit wrappers (above), but this fails:
+    // "cyclic metadata dependency detected, aborting"
     func testGenericWrapper() {
         guard let wrappedFoo = try? JSONDecoder().decode(GenericWrapper<Foo>.self, from: fooData!),
             let wrappedBar = try? JSONDecoder().decode(GenericWrapper<Bar>.self, from: barData!) else {

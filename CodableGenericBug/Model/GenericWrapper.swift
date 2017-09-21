@@ -7,5 +7,3 @@ struct GenericWrapper<S: Codable>: Codable {
     }
     let data: GenericWrapperData<S>
 }
-
-

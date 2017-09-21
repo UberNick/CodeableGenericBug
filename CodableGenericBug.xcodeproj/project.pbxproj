@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D16939891F741C98001E16AC /* CodableGenericBugTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16939881F741C98001E16AC /* CodableGenericBugTests.swift */; };
+		D16939911F744273001E16AC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D16939901F744273001E16AC /* README.md */; };
 		D19249DB1F71643D004A0D48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19249DA1F71643D004A0D48 /* AppDelegate.swift */; };
 		D19249DD1F71643D004A0D48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19249DC1F71643D004A0D48 /* ViewController.swift */; };
 		D19249E01F71643D004A0D48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D19249DE1F71643D004A0D48 /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		D16939861F741C98001E16AC /* CodableGenericBugTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodableGenericBugTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D16939881F741C98001E16AC /* CodableGenericBugTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableGenericBugTests.swift; sourceTree = "<group>"; };
 		D169398A1F741C98001E16AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D16939901F744273001E16AC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D19249D71F71643D004A0D48 /* CodableGenericBug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodableGenericBug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19249DA1F71643D004A0D48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D19249DC1F71643D004A0D48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				D19249D91F71643D004A0D48 /* CodableGenericBug */,
 				D16939871F741C98001E16AC /* CodableGenericBugTests */,
 				D19249D81F71643D004A0D48 /* Products */,
+				D16939901F744273001E16AC /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D16939911F744273001E16AC /* README.md in Resources */,
 				D19249E51F71643D004A0D48 /* LaunchScreen.storyboard in Resources */,
 				D19249E21F71643D004A0D48 /* Assets.xcassets in Resources */,
 				D19249ED1F71648E004A0D48 /* wrapped_foo.json in Resources */,

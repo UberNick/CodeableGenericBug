@@ -24,6 +24,16 @@ All three scenarios are isolated as unit tests.
 
 ![](run_tests.png "Run Tests")
 
+## Expected vs Actual Behavior
+
+### Expected Behavior
+* All 3 unit tests pass.
+* The structs `FooWrapper`, `GenericWrapper`, and `WorkingGenericWrapper` all behave in functionally-equivalent ways with regards to encoding and decoding
+
+### Actual Behavior
+` One unit test fails
+* The struct `GenericWrapper` triggers a runtime error when using it in `JSONDecoder.decode()`
+
 ## Scenarios in scope
 
 Three scenarios are tested in the following order:

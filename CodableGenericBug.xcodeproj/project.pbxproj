@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D16939891F741C98001E16AC /* CodableGenericBugTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16939881F741C98001E16AC /* CodableGenericBugTests.swift */; };
 		D19249DB1F71643D004A0D48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19249DA1F71643D004A0D48 /* AppDelegate.swift */; };
 		D19249DD1F71643D004A0D48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19249DC1F71643D004A0D48 /* ViewController.swift */; };
 		D19249E01F71643D004A0D48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D19249DE1F71643D004A0D48 /* Main.storyboard */; };
@@ -22,7 +23,20 @@
 		D19249FD1F718B7C004A0D48 /* WorkingGenericWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19249FC1F718B7C004A0D48 /* WorkingGenericWrapper.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D169398B1F741C98001E16AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D19249CF1F71643D004A0D48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D19249D61F71643D004A0D48;
+			remoteInfo = CodableGenericBug;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		D16939861F741C98001E16AC /* CodableGenericBugTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodableGenericBugTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D16939881F741C98001E16AC /* CodableGenericBugTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableGenericBugTests.swift; sourceTree = "<group>"; };
+		D169398A1F741C98001E16AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D19249D71F71643D004A0D48 /* CodableGenericBug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodableGenericBug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D19249DA1F71643D004A0D48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D19249DC1F71643D004A0D48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +55,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D16939831F741C98001E16AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D19249D41F71643D004A0D48 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -51,10 +72,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D16939871F741C98001E16AC /* CodableGenericBugTests */ = {
+			isa = PBXGroup;
+			children = (
+				D16939881F741C98001E16AC /* CodableGenericBugTests.swift */,
+				D169398A1F741C98001E16AC /* Info.plist */,
+			);
+			path = CodableGenericBugTests;
+			sourceTree = "<group>";
+		};
 		D19249CE1F71643D004A0D48 = {
 			isa = PBXGroup;
 			children = (
 				D19249D91F71643D004A0D48 /* CodableGenericBug */,
+				D16939871F741C98001E16AC /* CodableGenericBugTests */,
 				D19249D81F71643D004A0D48 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				D19249D71F71643D004A0D48 /* CodableGenericBug.app */,
+				D16939861F741C98001E16AC /* CodableGenericBugTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +139,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D16939851F741C98001E16AC /* CodableGenericBugTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D169398D1F741C98001E16AC /* Build configuration list for PBXNativeTarget "CodableGenericBugTests" */;
+			buildPhases = (
+				D16939821F741C98001E16AC /* Sources */,
+				D16939831F741C98001E16AC /* Frameworks */,
+				D16939841F741C98001E16AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D169398C1F741C98001E16AC /* PBXTargetDependency */,
+			);
+			name = CodableGenericBugTests;
+			productName = CodableGenericBugTests;
+			productReference = D16939861F741C98001E16AC /* CodableGenericBugTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D19249D61F71643D004A0D48 /* CodableGenericBug */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D19249E91F71643D004A0D48 /* Build configuration list for PBXNativeTarget "CodableGenericBug" */;
@@ -134,6 +184,11 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Nick Matelli";
 				TargetAttributes = {
+					D16939851F741C98001E16AC = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D19249D61F71643D004A0D48;
+					};
 					D19249D61F71643D004A0D48 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -154,11 +209,19 @@
 			projectRoot = "";
 			targets = (
 				D19249D61F71643D004A0D48 /* CodableGenericBug */,
+				D16939851F741C98001E16AC /* CodableGenericBugTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D16939841F741C98001E16AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D19249D51F71643D004A0D48 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,6 +237,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D16939821F741C98001E16AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D16939891F741C98001E16AC /* CodableGenericBugTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D19249D31F71643D004A0D48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -190,6 +261,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D169398C1F741C98001E16AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D19249D61F71643D004A0D48 /* CodableGenericBug */;
+			targetProxy = D169398B1F741C98001E16AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D19249DE1F71643D004A0D48 /* Main.storyboard */ = {
@@ -211,6 +290,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D169398E1F741C98001E16AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CodableGenericBugTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.matelli.CodableGenericBugTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodableGenericBug.app/CodableGenericBug";
+			};
+			name = Debug;
+		};
+		D169398F1F741C98001E16AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CodableGenericBugTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.matelli.CodableGenericBugTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodableGenericBug.app/CodableGenericBug";
+			};
+			name = Release;
+		};
 		D19249E71F71643D004A0D48 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -349,6 +458,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D169398D1F741C98001E16AC /* Build configuration list for PBXNativeTarget "CodableGenericBugTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D169398E1F741C98001E16AC /* Debug */,
+				D169398F1F741C98001E16AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D19249D21F71643D004A0D48 /* Build configuration list for PBXProject "CodableGenericBug" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

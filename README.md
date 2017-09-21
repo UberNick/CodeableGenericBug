@@ -20,7 +20,7 @@ Three scenarios are isolated as unit tests.  All logic is encapulated in the uni
 
 1. Open `CodableGenericBugTests.swift` in XCode
 2. Click the topmost diamond to compile the project and run all the unit tests
-3. Hit the debugger's "resume"button when second test triggers a runtime error and halts test execution
+3. Hit the debugger's "resume" button when second test triggers a runtime error and halts test execution
 
 ![](run_tests.png "Run Tests")
 

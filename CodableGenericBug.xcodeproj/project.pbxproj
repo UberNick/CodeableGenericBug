@@ -17,7 +17,7 @@
 		D19249EF1F7164A5004A0D48 /* wrapped_bar.json in Resources */ = {isa = PBXBuildFile; fileRef = D19249EE1F7164A5004A0D48 /* wrapped_bar.json */; };
 		D19249F31F716947004A0D48 /* Foo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19249F21F716947004A0D48 /* Foo.swift */; };
 		D19249F51F71694C004A0D48 /* Bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19249F41F71694C004A0D48 /* Bar.swift */; };
-		D19249F71F716A4D004A0D48 /* BrokenGenericWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19249F61F716A4D004A0D48 /* BrokenGenericWrapper.swift */; };
+		D19249F71F716A4D004A0D48 /* GenericWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19249F61F716A4D004A0D48 /* GenericWrapper.swift */; };
 		D19249F91F717B69004A0D48 /* FooWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19249F81F717B69004A0D48 /* FooWrapper.swift */; };
 		D19249FB1F717B71004A0D48 /* BarWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19249FA1F717B71004A0D48 /* BarWrapper.swift */; };
 		D19249FD1F718B7C004A0D48 /* WorkingGenericWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19249FC1F718B7C004A0D48 /* WorkingGenericWrapper.swift */; };
@@ -48,7 +48,7 @@
 		D19249EE1F7164A5004A0D48 /* wrapped_bar.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = wrapped_bar.json; sourceTree = "<group>"; };
 		D19249F21F716947004A0D48 /* Foo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foo.swift; sourceTree = "<group>"; };
 		D19249F41F71694C004A0D48 /* Bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bar.swift; sourceTree = "<group>"; };
-		D19249F61F716A4D004A0D48 /* BrokenGenericWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrokenGenericWrapper.swift; sourceTree = "<group>"; };
+		D19249F61F716A4D004A0D48 /* GenericWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericWrapper.swift; sourceTree = "<group>"; };
 		D19249F81F717B69004A0D48 /* FooWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooWrapper.swift; sourceTree = "<group>"; };
 		D19249FA1F717B71004A0D48 /* BarWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarWrapper.swift; sourceTree = "<group>"; };
 		D19249FC1F718B7C004A0D48 /* WorkingGenericWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingGenericWrapper.swift; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 			children = (
 				D19249F21F716947004A0D48 /* Foo.swift */,
 				D19249F41F71694C004A0D48 /* Bar.swift */,
-				D19249F61F716A4D004A0D48 /* BrokenGenericWrapper.swift */,
+				D19249F61F716A4D004A0D48 /* GenericWrapper.swift */,
 				D19249FC1F718B7C004A0D48 /* WorkingGenericWrapper.swift */,
 				D19249F81F717B69004A0D48 /* FooWrapper.swift */,
 				D19249FA1F717B71004A0D48 /* BarWrapper.swift */,
@@ -252,7 +252,7 @@
 				D19249F91F717B69004A0D48 /* FooWrapper.swift in Sources */,
 				D19249FB1F717B71004A0D48 /* BarWrapper.swift in Sources */,
 				D19249DD1F71643D004A0D48 /* ViewController.swift in Sources */,
-				D19249F71F716A4D004A0D48 /* BrokenGenericWrapper.swift in Sources */,
+				D19249F71F716A4D004A0D48 /* GenericWrapper.swift in Sources */,
 				D19249F51F71694C004A0D48 /* Bar.swift in Sources */,
 				D19249FD1F718B7C004A0D48 /* WorkingGenericWrapper.swift in Sources */,
 				D19249F31F716947004A0D48 /* Foo.swift in Sources */,

@@ -1,6 +1,6 @@
 # CodeableGenericBug
 
-This project illustrates a compiler or framework issue with Swift 4 and iOS 10.  It occurs when using generics in nested structs as Codables.
+This project illustrates a compiler or framework issue with Swift 4 and iOS 10.  It occurs when deserializing generics in nested structs using the Codable interface.
 
 ## Context
 

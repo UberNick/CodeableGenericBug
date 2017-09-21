@@ -1,35 +1,39 @@
-//
-//  CodableGenericBugTests.swift
-//  CodableGenericBugTests
-//
-//  Created by Nick Matelli on 9/21/17.
-//  Copyright © 2017 Nick Matelli. All rights reserved.
-//
-
 import XCTest
+@testable import CodableGenericBug
 
 class CodableGenericBugTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    let comparisonFoo = Foo(name: "Fooey McFooface", age: 23) // What decoded "Foo" object should look like
+    let comparisonBar = Bar(title: "Barry McBarface", msrp: 3.50) // What decoded "Bar" object should look like
+    let fooData = getDataFromFile("wrapped_foo")! // Raw JSON data representing "Foo" but wrapped in a container
+    let barData = getDataFromFile("wrapped_foo")! // Raw JSON data representing "Bar" but wrapped in a container
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    // Test deserialization when using explicit "Foo" and "Bar" model wrappers.  Works fine.
+    func testExplicitWrappers() {
+        guard let wrappedFoo = try? JSONDecoder().decode(FooWrapper<Foo>.self, from: fooData),
+            let wrappedBar = try? JSONDecoder().decode(BarWrapper<Bar>.self, from: barData) else {
+            XCTFail("Unable to decode JSON file")
         }
+        let foo = wrappedFoo.data
+        let bar = wrappedBar.data
+        XCTAssertEqual(foo, comparisonFoo)
+        XCTAssertEqual(bar, comparisonBar)
     }
     
+    // Test deserialization when using generic "Foo" and "Bar" model wrappers.
+    // Should work and behave in same manner as using explicit wrappers (above), but this fails
+    func testGenericWrapper() {
+        XCTAssert(true)
+    }
+    
+    func testGenericExternalizedWrapper() {
+        XCTAssert(true)
+    }
+    
+    private func getDataFromFile(_ fileName: String) -> Data? {
+        if let path = Bundle.main.url(forResource: fileName, withExtension: "json") {
+            return try? Data(contentsOf: path)
+        }
+        return nil
+    }
 }

@@ -40,14 +40,14 @@ All three scenarios are isolated as unit tests.
 
 Three scenarios are tested in the following order:
 
-* A reference scenario of using a Codable wrapper object.
-* A broken scenario that re-uses the Codable wrapper object, but with a generic reference on the inner struct
-* A workaround scenario that successfully uses generic wrappers, but does so by not defining the inner struct inline
+1. A reference scenario of using a Codable wrapper object.
+2. A broken scenario that re-uses the Codable wrapper object, but with a generic reference on the inner struct
+3. A workaround scenario that successfully uses generic wrappers, but does so by not defining the inner struct inline
 
 ## Comparisons
 
 * `FooWrapper` (working) vs `GenericWrapper` (broken)
-* The only difference between the two is that "data" is typed as `Foo` on the left and as `T` (generic) on the right
+* The only difference between the two is that "attributes" is typed as `Foo` on the left and as `T` (generic) on the right
 * The left struct works fine for our use case.  The right struct causes a runtime error when decoding.
 
 ![](specific_vs_generic.png "Specific vs Generic")

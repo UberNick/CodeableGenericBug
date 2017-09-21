@@ -6,33 +6,31 @@ This project illustrates a compiler or framework issue with Swift 4 and iOS 10. 
 
 The use-case that uncovered this bug is as follows:
 
-1. An external service returns JSON models like `Foo` and `Bar`
-2. The service returns all models in a common wrapper so that `response.data.attributes` is the actual thing we want (i.e. `Foo`)
-
-    2a. It's wrapped so that properties like `response.metadata`, `response.filters`, etc can also be returned in a consistent manner within the same response
-3. These models mirror the structures we want in our iOS client
-4. To avoid redundant work, we'd like to use the `Codable` interface and built-in `JSONDecoder` to parse service responses
-5. When creating a reusable wrapper to parse service responses, a runtime error is triggered
-
-    5a. "cyclic metadata dependency detected"
+1. I have a client application that consumes data from a web service
+2. Data is encapsulated as models (e.g. `Foo` and `Bar`) and marshalled via JSON
+3. The JSON representation of these objects is wrapped in a common structure (that can include metadata or other info)
+4. Swift objects can mirror both the original models (i.e. `Foo` and `Bar`) as well as the wrappers returned by the service (i.e. `FooWrapper` and `BarWrapper`)
+5. Implementing the Codable interface and leveraging Swift 4's `JSONDecoder` works fine when using explicitly-typed wrapper structs
+6. Using a generic or common wrapper triggers an unexpected runtime error within `JSONDecoder.decode`
 
 
 ## How to use this project
 
-All three scenarios are isolated as unit tests.
+Three scenarios are isolated as unit tests.  All logic is encapulated in the unit test file.  Open and run that file.
 
 1. Open `CodableGenericBugTests.swift` in XCode
-2. Click the diamond to run all tests
+2. Click the topmost diamond to compile the project and run all the unit tests
+3. Hit the debugger's "resume"button when second test triggers a runtime error and halts test execution
 
 ![](run_tests.png "Run Tests")
 
 ## Expected vs Actual Behavior
 
-### Expected Behavior
+#### Expected Behavior
 * All 3 unit tests pass.
 * The structs `FooWrapper`, `GenericWrapper`, and `WorkingGenericWrapper` all behave in functionally-equivalent ways with regards to encoding and decoding
 
-### Actual Behavior
+#### Actual Behavior
 ` One unit test fails
 * The struct `GenericWrapper` triggers a runtime error when using it in `JSONDecoder.decode()`
 
@@ -41,8 +39,8 @@ All three scenarios are isolated as unit tests.
 Three scenarios are tested in the following order:
 
 1. A reference scenario of using a Codable wrapper object.
-2. A broken scenario that re-uses the Codable wrapper object, but with a generic reference on the inner struct
-3. A workaround scenario that successfully uses generic wrappers, but does so by not defining the inner struct inline
+2. A broken scenario that re-uses the Codable wrapper object, but with a generically-typed object in the inner struct
+3. A workaround scenario that successfully uses generic wrappers, but does so by not using an inline struct definition
 
 ## Comparisons
 

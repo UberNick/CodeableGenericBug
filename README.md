@@ -13,7 +13,7 @@ All three scenarios are isolated as unit tests.
 
 ## Comparisons
 
-![](specific_vs_generic "Specific vs Generic")
+![](specific_vs_generic.png "Specific vs Generic")
 
-![](internal_vs_external "Internal vs External")
+![](internal_vs_external.png "Internal vs External")
 
